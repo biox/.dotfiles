@@ -27,6 +27,9 @@
 
   networking.wireless.enable = true;
 
+  # Only needed for nixops + libvirt local dev
+  networking.firewall.checkReversePath = false;
+
   hardware.pulseaudio.enable = true;
 
   virtualisation = {
@@ -56,7 +59,7 @@
     zsh tmux emacs vim xst firefox
 
     # Tools
-    curl lsof jq tmux wget git which nmap packer terraform vagrant tree s3cmd wireguard stow unzip
+    curl lsof jq tmux wget git which nmap packer terraform vagrant tree s3cmd wireguard stow unzip nixops virtmanager
 
     # Media
     scrot zathura mpv feh owncloud-client beets deadbeef-with-plugins
