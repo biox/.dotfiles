@@ -93,7 +93,7 @@
     uid = 1000;
     useDefaultShell = false;
     initialPassword = "sekret";
-    extraGroups = ["wheel" "audio" "docker"];
+    extraGroups = ["wheel" "audio" "docker" "libvirtd"];
     shell = "/run/current-system/sw/bin/zsh";
   };
 
