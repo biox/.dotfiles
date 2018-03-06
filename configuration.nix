@@ -50,7 +50,7 @@
     i3-gaps i3status i3lock i3blocks rofi
 
     # Desktop
-    ranger pavucontrol lxappearance compton nitrogen redshift audacity mumble keepassx2 twmn
+    ranger pavucontrol lxappearance compton nitrogen redshift audacity mumble keepassx2 twmn arc-theme arc-icon-theme
 
     # Loves of my Life
     zsh tmux emacs vim xst firefox
