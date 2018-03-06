@@ -1,2 +1,2 @@
-directory: ~/mnt/music
-library: ~/mnt/music/musiclibrary.db
+directory: /mnt/music
+library: /mnt/music/.musiclibrary.db

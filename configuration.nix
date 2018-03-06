@@ -41,7 +41,7 @@
       # this line prevents hanging on network split
       automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
 
-    in ["${automount_opts},credentials=/etc/nixos/smb-secrets"];
+    in ["${automount_opts},uid=1000,credentials=/etc/nixos/smb-secrets"];
   };
 
   environment.systemPackages = with pkgs; [
@@ -56,10 +56,10 @@
     zsh tmux emacs vim xst firefox
 
     # Tools
-    curl lsof jq tmux wget git which nmap packer terraform vagrant tree s3cmd wireguard stow
+    curl lsof jq tmux wget git which nmap packer terraform vagrant tree s3cmd wireguard stow unzip
 
     # Media
-    scrot zathura mpv feh owncloud-client beets deadbeef
+    scrot zathura mpv feh owncloud-client beets deadbeef-with-plugins
 
     # Programming
     man ack ruby python27Full python3 go
