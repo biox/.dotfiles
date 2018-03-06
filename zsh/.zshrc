@@ -33,8 +33,6 @@ compinit
 setopt auto_cd
 cdpath=($HOME/code)
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Aliases
 # Utilities
 alias vi='vim'
