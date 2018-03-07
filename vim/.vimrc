@@ -60,7 +60,7 @@ set sidescroll=1
 set sidescrolloff=10
 set tabstop=8
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 set softtabstop=0
 set smarttab
 set autoindent
