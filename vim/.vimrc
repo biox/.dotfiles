@@ -1,3 +1,8 @@
+" PATH O GEN
+execute pathogen#infect()
+filetype plugin indent on
+syntax on
+
 " Basics
 set nocompatible
 set synmaxcol=200
@@ -55,7 +60,6 @@ set wildignore+=*.orig                           " Merge resolution files
 
 
 " Programmy
-syntax enable
 set scrolloff=5
 set sidescroll=1
 set sidescrolloff=10
