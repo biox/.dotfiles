@@ -1,0 +1,23 @@
+st.font: Source Code Pro:pixelsize=14:antialias=true:autohint=true;
+st.cursorshape: 4
+
+! Tomorrow Night
+! st.foreground:   #c5c8c6
+! st.background:   #1d1f21
+! st.color0:       #1d1f21
+! st.color1:       #cc6666
+! st.color2:       #b5bd68
+! st.color3:       #f0c674
+! st.color4:       #81a2be
+! st.color5:       #b294bb
+! st.color6:       #8abeb7
+! st.color7:       #c5c8c6
+! 
+! st.color8:       #969896
+! st.color9:       #de935f
+! st.color10:      #282a2e
+! st.color11:      #373b41
+! st.color12:      #b4b7b4
+! st.color13:      #e0e0e0
+! st.color14:      #a3685a
+! st.color15:      #ffffff
