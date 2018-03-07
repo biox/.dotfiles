@@ -3,6 +3,7 @@ set nocompatible
 set synmaxcol=200
 set encoding=utf-8
 set history=1000
+set hidden
 set undofile
 set nobackup
 set noswapfile
