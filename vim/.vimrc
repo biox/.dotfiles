@@ -1,17 +1,20 @@
 " Basics
-if !has('g:syntax_on')|syntax enable|endif
-set synmaxcol=120
+set nocompatible
+set synmaxcol=200
 set relativenumber
 set encoding=utf-8
 set history=1000
 set undofile
 set nobackup
 set noswapfile
-set nocompatible
 set modelines=0
 
+" Disable Help
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
 " Undo
-" Let's save undo info!
 if !isdirectory($HOME."/.vim")
   call mkdir($HOME."/.vim", "", 0770)
 endif
@@ -27,7 +30,7 @@ set background=dark
 colorscheme paramount
 set laststatus=2
 set showbreak=↪\
- set list
+set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set numberwidth=4
 set showmatch
@@ -38,6 +41,7 @@ set wildmode=list:longest
 set wildignore=*.swp,*.bak,*.pyc,*.class
 
 " Programmy
+syntax enable
 set scrolloff=3
 set tabstop=8
 set expandtab
@@ -45,6 +49,12 @@ set shiftwidth=2
 set softtabstop=0
 set smarttab
 set autoindent
+
+" Long Lines
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
 
 " Splits
 set fillchars=vert:│
@@ -58,12 +68,15 @@ set hlsearch
 set incsearch
 highlight Search ctermbg=black ctermfg=yellow term=underline
 
-" Leader Bois
+" Happy Remappy
 let g:mapleader = ","
 nnoremap <leader>pp :setlocal paste!<cr>
 nnoremap <silent> <leader><cr> :noh<cr>
 nmap <leader>w :w<cr>
 nnoremap <leader>i :set list!<CR>
+nnoremap ; :
+nnoremap <leader>a :Ack
+nnoremap <leader>v V`]             " Visual-select recently pasted text
 
 " Always search with very magic mode enabled
 nnoremap / /\v
