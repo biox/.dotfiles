@@ -1,11 +1,25 @@
 " Basics
 if !has('g:syntax_on')|syntax enable|endif
 set synmaxcol=120
-set number
-set enc=utf8
+set relativenumber
+set encoding=utf-8
 set history=1000
+set undofile
 set nobackup
 set noswapfile
+set nocompatible
+set modelines=0
+
+" Undo
+" Let's save undo info!
+if !isdirectory($HOME."/.vim")
+  call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo-dir")
+  call mkdir($HOME."/.vim/undo-dir", "", 0700)
+endif
+set undodir=~/.vim/undo-dir
+set undofile
 
 " Theme
 set t_Co=256
@@ -20,10 +34,11 @@ set showmatch
 
 " Wildmenu
 set wildmenu
-set wildmode=longest:full,full
+set wildmode=list:longest
 set wildignore=*.swp,*.bak,*.pyc,*.class
 
 " Programmy
+set scrolloff=3
 set tabstop=8
 set expandtab
 set shiftwidth=2
