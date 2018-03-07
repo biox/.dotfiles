@@ -39,7 +39,7 @@ alias vi='vim'
 alias ls='ls -Gp'
 
 # Git
-alias ga='git commit -a --amend --no-edit'
+alias ga='git add --all'
 alias gap='git add -p'
 alias gb='git branch'
 alias gbc='git rev-parse --abbrev-ref HEAD'
