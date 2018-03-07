@@ -53,16 +53,18 @@
     i3-gaps i3status i3lock i3blocks rofi
 
     # Desktop
-    ranger pavucontrol lxappearance compton nitrogen redshift audacity mumble keepassx2 twmn arc-theme arc-icon-theme
+    ranger pavucontrol lxappearance compton nitrogen redshift
+    audacity mumble keepassx2 twmn arc-theme arc-icon-theme
 
     # Loves of my Life
     zsh tmux emacs vim xst firefox
 
     # Tools
-    curl lsof jq tmux wget git which nmap packer terraform vagrant tree s3cmd wireguard stow unzip nixops virtmanager
+    curl lsof jq tmux wget git which nmap packer terraform
+    vagrant tree s3cmd wireguard stow unzip nixops virtmanager
 
     # Media
-    scrot zathura mpv feh owncloud-client beets deadbeef-with-plugins
+    scrot zathura mpv feh owncloud-client beets deadbeef-with-plugins mutt
 
     # Programming
     man ack ruby python27Full python3 go
