@@ -10,6 +10,7 @@ set background=dark
 colorscheme paramount
 set laststatus=2
 set showbreak=↪\
+set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set numberwidth=4
 set showmatch
@@ -30,8 +31,8 @@ set splitbelow
 set ignorecase
 set smartcase
 set hlsearch
+highlight Search ctermbg=black ctermfg=yellow term=underline
 set incsearch
-set list
 
 " Leader Bois
 let g:mapleader = ","
@@ -62,4 +63,4 @@ function! StripTrailingWhitespace()
   let @/ = saved_search
 endfunction
 
-autocmd FileType ruby,html,haml,css,js,vim autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
+autocmd FileType go,ruby,html,haml,css,js,vim autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
