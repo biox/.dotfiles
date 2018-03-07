@@ -1,32 +1,36 @@
+" Basics
 if !has('g:syntax_on')|syntax enable|endif
-set number
-set background=dark
 set synmaxcol=120
+set number
+set enc=utf8
+
+" Theme
+set t_Co=16
+set background=dark
 colorscheme paramount
-set ignorecase
-set smartcase
+set laststatus=2
+set showbreak=↪\
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+set numberwidth=4
+set showmatch
+
+" Tabs
 set tabstop=8
-set softtabstop=0
 set expandtab
 set shiftwidth=2
+set softtabstop=0
 set smarttab
-set laststatus=2
-set showtabline=1
-set guioptions-=e
-set wildignore+=tmp,.bundle,.sass-cache,.git,.svn,.hg,doc,coverage,vendor,node_modules,deps,_build,elm-stuff,ios,android
+
+" Splits
 set fillchars=vert:│
-set listchars=tab:\·\ ,trail:·,eol:¬
-set numberwidth=4
 set splitright
 set splitbelow
-set nowrap
 
 " Searching
-set hlsearch
-set incsearch
 set ignorecase
 set smartcase
-set showmatch
+set hlsearch
+set incsearch
 set list
 
 " Leader Bois
