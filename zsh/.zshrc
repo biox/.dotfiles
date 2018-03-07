@@ -36,6 +36,7 @@ cdpath=($HOME/code)
 # Aliases
 # Utilities
 alias vi='vim'
+alias ls='ls --color'
 
 # Git
 alias ga='git commit -a --amend --no-edit'
