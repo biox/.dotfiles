@@ -13,9 +13,9 @@
 - [x] autostart everything via i3
 - [x] configure twmn and autostart it
 - [x] Import all of my musick w/ beets, overwrite it on server
-- [ ] change terminal font to Source Code Pro and increase size to 13pt
+- [x] change terminal font to Source Code Pro and increase size to 13pt
 - [x] Find suitable music player appy (yay deadbeef)
-- [ ] Figure out how GTK themes work and make deadbeef look perty
+- [x] Figure out how GTK themes work and make deadbeef look perty
 - [x] Store dotfiles in nixos config (.i3/config .i3blocks .zshrc .tmux.conf .beetsconfig etc)
 - [ ] Fix shitty vim outline
 
