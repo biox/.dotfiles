@@ -3,24 +3,33 @@ if !has('g:syntax_on')|syntax enable|endif
 set synmaxcol=120
 set number
 set enc=utf8
+set history=1000
+set nobackup
+set noswapfile
 
 " Theme
-set t_Co=16
+set t_Co=256
 set background=dark
 colorscheme paramount
 set laststatus=2
 set showbreak=↪\
-set list
+ set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set numberwidth=4
 set showmatch
 
-" Tabs
+" Wildmenu
+set wildmenu
+set wildmode=longest:full,full
+set wildignore=*.swp,*.bak,*.pyc,*.class
+
+" Programmy
 set tabstop=8
 set expandtab
 set shiftwidth=2
 set softtabstop=0
 set smarttab
+set autoindent
 
 " Splits
 set fillchars=vert:│
@@ -31,8 +40,8 @@ set splitbelow
 set ignorecase
 set smartcase
 set hlsearch
-highlight Search ctermbg=black ctermfg=yellow term=underline
 set incsearch
+highlight Search ctermbg=black ctermfg=yellow term=underline
 
 " Leader Bois
 let g:mapleader = ","
