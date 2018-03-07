@@ -1,0 +1,75 @@
+set my_user = 'jesse@arkham.city'
+
+# imap
+set imap_user = $my_user
+set folder = imaps://mail.arkham.city/
+set spoolfile = +INBOX
+set postponed = +Drafts
+set imap_check_subscribed
+
+# smtp
+set record = +Sent
+set realname = 'Jesse Olson'
+set from = 'jesse@arkham.city'
+set use_from = yes
+set smtp_url=smtp://$my_user@mail.arkham.city:587
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+# macros
+macro index,pager d "<save-message>+Trash<enter><enter>" "Trash"
+macro index,pager y "<save-message>+Archive<enter><enter>" "Archive"
+
+# formatting
+set folder_format="%2C %t %N %8s %d %f"
+set text_flowed # http://brianbuccola.com/line-breaks-in-mutt-and-vim/
+
+# mailcheck
+set imap_keepalive = 300
+set mail_check = 120
+
+# vim-bindings https://github.com/neomutt/neomutt/blob/master/contrib/vim-keys/vim-keys.rc
+bind attach,browser,index       g   noop
+bind attach,browser,index       gg  first-entry
+bind attach,browser,index       G   last-entry
+bind pager                      g   noop
+bind pager                      gg  top
+bind pager                      G   bottom
+bind pager                      k   previous-line
+bind pager                      j   next-line
+bind pager,index                d   noop
+bind pager,index                dd  delete-message
+bind attach,browser,pager,index \Cu half-up
+bind attach,browser,pager,index \Cd half-down
+bind index,pager                \ek sidebar-prev
+bind index,pager                \ej sidebar-next
+bind index,pager                \e<return> sidebar-open
+
+# sidebar - disabled for now
+set sidebar_visible = no
+set sidebar_width = 16
+set sidebar_short_path = yes
+set sidebar_folder_indent = yes
+set sidebar_indent_string = ' '
+
+# misc
+unset help
+set sleep_time = 0 # speed up folder switching
+
+# colors
+color hdrdefault blue black
+color quoted blue black
+color signature blue black
+color attachment red black
+color prompt brightmagenta black
+color message brightred black
+color error brightred black
+color indicator black red
+color status brightgreen blue
+color tree white black
+color normal white black
+color markers red black
+color search white black
+color tilde brightmagenta black
+color index blue black ~F
+color index red black "~N|~O"
