@@ -57,7 +57,7 @@
     audacity mumble keepassx2 twmn arc-theme arc-icon-theme
 
     # Loves of my Life
-    zsh tmux emacs vim xst firefox
+    zsh tmux emacs vim xst firefox alacritty
 
     # Tools
     curl lsof jq tmux wget git which nmap packer terraform
@@ -75,6 +75,7 @@
     fonts = with pkgs; [
       source-code-pro
       font-awesome-ttf
+      powerline-fonts
     ];
   };
 

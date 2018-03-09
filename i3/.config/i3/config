@@ -23,7 +23,7 @@
   font pango:Source Code Pro
 
 # basic commands
-  bindsym $mod+Return exec st
+  bindsym $mod+Return exec alacritty
   bindsym $mod+shift+q kill
   bindsym $mod+p exec cmus-remote --pause
   bindsym $mod+equal exec cmus-remote --volume +5%

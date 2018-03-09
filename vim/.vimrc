@@ -143,3 +143,21 @@ function! StripTrailingWhitespace()
 endfunction
 
 autocmd FileType go,ruby,html,haml,css,js,vim autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
+
+" Messy horrible filetype specifics
+" Correct yaml spacing issues
+augroup ft_yaml
+    au!
+    au FileType yaml set shiftwidth=2
+augroup END
+
+" Fugitive
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gw :Gwrite<cr>
+nnoremap <leader>ga :Gadd<cr>
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gci :Gcommit<cr>
+nnoremap <leader>gm :Gmove<cr>
+nnoremap <leader>gr :Gremove<cr>
+nnoremap <leader>gl :Shell git gl -18<cr>:wincmd \|<cr>
