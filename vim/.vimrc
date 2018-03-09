@@ -151,6 +151,11 @@ augroup ft_yaml
     au FileType yaml set shiftwidth=2
 augroup END
 
+augroup ft_go
+    au!
+    au FileType go set shiftwidth=8
+augroup END
+
 " Fugitive
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gs :Gstatus<cr>
