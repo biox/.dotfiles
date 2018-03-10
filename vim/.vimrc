@@ -120,9 +120,10 @@ nnoremap <leader>v V`]
 " EZESC
 inoremap jj <ESC>
 
-" Always search with very magic mode enabled
-nnoremap / /\v
-vnoremap / /\v
+" Always search with very magic mode enabled - bugs out on LInux, comment for
+" now
+" nnoremap / /\v
+" vnoremap / /\v
 
 " Do not jump over 'real' lines, only over screen lines
 nnoremap j gj
