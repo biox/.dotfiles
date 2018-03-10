@@ -22,16 +22,16 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
+  boot.kernelModules = [ "kvm-intel" ];
 
   time.timeZone = "America/Chicago";
-
-  networking.wireless.enable = true;
 
   # Only needed for nixops + libvirt local dev
   networking.firewall.checkReversePath = false;
 
   hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.support32Bit = true;
+  hardware.opengl.driSupport32Bit = true;
 
   virtualisation = {
     docker.enable = true;
