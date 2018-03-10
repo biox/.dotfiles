@@ -1,11 +1,18 @@
 # Usage
 
-- Install a new NixOS system with git, login as your user
-- `git clone git@github.com:biox/.dotfiles.git`
-- `sudo cp .dotfiles/configuration.nix /etc/nixos/configuration.nix`
+- Install a new bare NixOS system on an EFI compatible system, login as root
+- `nix-env -i git vim`
+- `vi /etc/nixos/smb-secrets` (format username=X\npassword=Y)
+- `chmod 0400 /etc/nixos/smb-secrets`
+- `git clone https://github.com/biox/dotfiles`
+- `cp .dotfiles/configuration.nix /etc/nixos/configuration.nix`
 - `nixos-rebuild switch`
-- `cd .dotfiles`
+- `reboot`
+- Login as jesse
+- vi -> :GoInstallBinaries
+- `git clone https://github.com/biox/dotfiles`
 - `stow vim/reshift/zsh/etc/whatever`
+- DONE
 
 # TODO
 
@@ -17,7 +24,7 @@
 - [x] Find suitable music player appy (yay deadbeef)
 - [x] Figure out how GTK themes work and make deadbeef look perty
 - [x] Store dotfiles in nixos config (.i3/config .i3blocks .zshrc .tmux.conf .beetsconfig etc)
-- [ ] Fix shitty vim outline
+- [x] Fix shitty vim outline
 
 ## GPG Project
 
@@ -38,3 +45,7 @@
 ## Blog Project
 
 - [ ] Auto-deploy blog on nixos via nixops on DO (project)
+
+## Tectonic Project
+
+- [ ] Setup tectonic locally via virtualbox ayy
