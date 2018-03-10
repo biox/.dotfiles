@@ -36,6 +36,7 @@
   virtualisation = {
     docker.enable = true;
     libvirtd.enable = true;
+    virtualbox.host.enable = true;
   };
 
   fileSystems."/mnt/music" = {
@@ -63,6 +64,7 @@
     # Tools
     curl lsof jq tmux wget git which nmap packer terraform
     vagrant tree s3cmd wireguard stow unzip nixops virtmanager
+    neofetch
 
     # Media
     scrot zathura mpv feh owncloud-client beets deadbeef-with-plugins mutt
