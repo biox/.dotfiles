@@ -3,6 +3,8 @@
 {
 
   system.stateVersion = "17.09";
+  # Ugh
+  nixpkgs.config.allowUnfree = true;
 
   imports =
     [
@@ -12,14 +14,13 @@
   boot.initrd.luks.devices = [
     {
       name = "root";
-      device = "/dev/sda2";
+      device = "/dev/sda3";
       preLVM = true;
     }
   ];
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
 
@@ -69,6 +70,9 @@
     # Programming
     man ack ruby python27Full python3 go
 
+    # Non-Free Software
+    steam
+
   ];
 
   fonts = {
@@ -91,6 +95,7 @@
         i3.enable = true;
         default = "i3";
       };
+      videoDrivers = [ "nvidia" ];
     };
   };
 
