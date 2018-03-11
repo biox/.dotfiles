@@ -29,8 +29,11 @@
   # Only needed for nixops + libvirt local dev
   networking.firewall.checkReversePath = false;
 
-  hardware.pulseaudio.enable = true;
-  hardware.pulseaudio.support32Bit = true;
+  hardware.pulseaudio = {
+    enable = true;
+    support32Bit = true;
+  };
+
   hardware.opengl.driSupport32Bit = true;
 
   virtualisation = {
@@ -64,10 +67,11 @@
     # Tools
     curl lsof jq tmux wget git which nmap packer terraform
     vagrant tree s3cmd wireguard stow unzip nixops virtmanager
-    neofetch
+    neofetch kubernetes
 
     # Media
-    scrot zathura mpv feh owncloud-client beets deadbeef-with-plugins mutt
+    scrot zathura mpv feh owncloud-client beets deadbeef-with-plugins 
+    mutt ncmpcpp
 
     # Programming
     man ack ruby python27Full python3 go
@@ -86,6 +90,20 @@
   };
 
   services = {
+    mpd = {
+      enable = true;
+      user = "jesse";
+      group = "users";
+      dataDir = "/home/jesse/.mpd";
+      musicDirectory = "/mnt/music";
+      extraConfig = ''
+        audio_output {
+          type "pulse"
+          name "pulse audio"
+        }
+      '';
+    };
+    
     xserver = {
       enable = true;
       layout = "us";
