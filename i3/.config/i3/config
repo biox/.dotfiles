@@ -25,7 +25,7 @@
 # basic commands
   bindsym $mod+Return exec alacritty
   bindsym $mod+shift+q kill
-  bindsym $mod+p exec cmus-remote --pause
+  bindsym $mod+p exec rofi-pass
   bindsym $mod+equal exec cmus-remote --volume +5%
   bindsym $mod+minus exec cmus-remote --volume -5%
   bindsym $mod+d exec rofi -show run
