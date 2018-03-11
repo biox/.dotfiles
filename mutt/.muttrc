@@ -16,9 +16,11 @@ set smtp_url=smtp://$my_user@mail.arkham.city:587
 set ssl_starttls = yes
 set ssl_force_tls = yes
 
-# macros
-macro index,pager d "<save-message>+Trash<enter><enter>" "Trash"
+# macros + generic bindings
+## archive
 macro index,pager y "<save-message>+Archive<enter><enter>" "Archive"
+## reply-all
+bind index,pager R group-reply
 
 # formatting
 set folder_format="%2C %t %N %8s %d %f"

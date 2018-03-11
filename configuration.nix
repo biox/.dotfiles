@@ -66,12 +66,12 @@
     audacity mumble keepassx2 twmn arc-theme arc-icon-theme
 
     # Loves of my Life
-    vimHugeX zsh tmux firefox alacritty pass
+    vimHugeX zsh tmux firefox alacritty pass gnupg
 
     # Tools
     curl lsof jq tmux wget git which nmap packer terraform
     vagrant tree s3cmd wireguard stow unzip nixops virtmanager
-    neofetch kubernetes
+    neofetch kubernetes pinentry
 
     # Media
     scrot zathura mpv feh owncloud-client beets deadbeef-with-plugins 
