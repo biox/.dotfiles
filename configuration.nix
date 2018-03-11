@@ -55,14 +55,18 @@
   environment.systemPackages = with pkgs; [
 
     # WM Essentials
-    i3-gaps i3status i3lock i3blocks rofi
+    i3-gaps i3status i3lock i3blocks
+    rofi rofi-pass
+
+    # Rofi-pass deps
+    xdotool
 
     # Desktop
     ranger pavucontrol lxappearance compton nitrogen redshift
     audacity mumble keepassx2 twmn arc-theme arc-icon-theme
 
     # Loves of my Life
-    zsh tmux emacs xst firefox alacritty vimHugeX
+    vimHugeX zsh tmux firefox alacritty pass
 
     # Tools
     curl lsof jq tmux wget git which nmap packer terraform
