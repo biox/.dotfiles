@@ -135,16 +135,6 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-function! StripTrailingWhitespace()
-  silent exe "normal ma<CR>"
-  let saved_search = @/
-  %s/\s\+$//e
-  silent exe "normal `a<CR>"
-  let @/ = saved_search
-endfunction
-
-autocmd FileType go,ruby,html,haml,css,js,vim autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
-
 " Messy horrible filetype specifics
 " Correct yaml spacing issues
 augroup ft_yaml
