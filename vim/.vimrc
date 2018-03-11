@@ -150,6 +150,7 @@ augroup ft_go
     au FileType go set shiftwidth=8
 augroup END
 
+" Plugins
 " Fugitive
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gs :Gstatus<cr>
@@ -160,3 +161,9 @@ nnoremap <leader>gci :Gcommit<cr>
 nnoremap <leader>gm :Gmove<cr>
 nnoremap <leader>gr :Gremove<cr>
 nnoremap <leader>gl :Shell git gl -18<cr>:wincmd \|<cr>
+
+" neocomplete (since deopletes' vim8 support requires a billion fking
+" dependencies)
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3

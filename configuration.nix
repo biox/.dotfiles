@@ -62,7 +62,7 @@
     audacity mumble keepassx2 twmn arc-theme arc-icon-theme
 
     # Loves of my Life
-    zsh tmux emacs vim xst firefox alacritty
+    zsh tmux emacs xst firefox alacritty vimHugeX
 
     # Tools
     curl lsof jq tmux wget git which nmap packer terraform
