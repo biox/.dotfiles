@@ -13,3 +13,6 @@
 [submodule "vim/.vim/bundle/ctrl-p"]
 	path = vim/.vim/bundle/ctrl-p
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "vim/.vim/bundle/neocomplete"]
+	path = vim/.vim/bundle/neocomplete
+	url = https://github.com/Shougo/neocomplete.vim.git
