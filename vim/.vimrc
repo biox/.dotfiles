@@ -70,6 +70,9 @@ set softtabstop=0
 set smarttab
 set autoindent
 
+" Go-specific
+let g:go_fmt_command = "goimports"
+
 " Long Lines
 set wrap
 set textwidth=80
