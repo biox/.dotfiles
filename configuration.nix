@@ -75,7 +75,7 @@
 
     # Media
     scrot zathura mpv feh owncloud-client beets deadbeef-with-plugins 
-    mutt ncmpcpp
+    mutt ncmpcpp libreoffice
 
     # Programming
     man ack ruby python27Full python3 go

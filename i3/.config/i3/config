@@ -99,6 +99,7 @@
   for_window [class="Pavucontrol"] floating enable
   for_window [class="Mumble"] floating enable
   for_window [class="Nitrogen"] floating enable
+  for_window [class="Pinentry"] floating enable
 
 # Lock screen
 
