@@ -64,6 +64,7 @@
     # Desktop
     ranger pavucontrol lxappearance compton nitrogen redshift
     audacity mumble keepassx2 twmn arc-theme arc-icon-theme
+    pcmanfm
 
     # Loves of my Life
     vimHugeX zsh tmux firefox alacritty pass gnupg
