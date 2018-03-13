@@ -26,9 +26,6 @@
 
   time.timeZone = "America/Chicago";
 
-  # Only needed for nixops + libvirt local dev
-  networking.firewall.checkReversePath = false;
-
   hardware.pulseaudio = {
     enable = true;
     support32Bit = true;
@@ -71,11 +68,11 @@
 
     # Tools
     curl lsof jq tmux wget git which nmap packer terraform
-    vagrant tree s3cmd wireguard stow unzip nixops virtmanager
+    vagrant tree s3cmd wireguard stow unzip virtmanager
     neofetch kubernetes pinentry
 
     # Media
-    scrot zathura mpv feh owncloud-client beets deadbeef-with-plugins 
+    scrot zathura mpv feh owncloud-client beets
     mutt ncmpcpp libreoffice
 
     # Programming
