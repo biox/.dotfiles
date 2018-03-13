@@ -25,6 +25,7 @@
 - [x] Figure out how GTK themes work and make deadbeef look perty
 - [x] Store dotfiles in nixos config (.i3/config .i3blocks .zshrc .tmux.conf .beetsconfig etc)
 - [x] Fix shitty vim outline
+- [ ] Make polybar comfy
 
 ## GPG Project
 
