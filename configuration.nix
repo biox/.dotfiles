@@ -24,12 +24,15 @@
 
   boot.kernelModules = [ "kvm-intel" ];
 
+  networking.hostName = "navi";
+
   time.timeZone = "America/Chicago";
 
-  hardware.pulseaudio = {
-    enable = true;
-    support32Bit = true;
-  };
+#  hardware.pulseaudio = {
+#    enable = true;
+#    support32Bit = true;
+#    package = pkgs.pulseaudioFull;
+#  };
 
   hardware.opengl.driSupport32Bit = true;
 
@@ -68,10 +71,10 @@
     # Tools
     curl lsof jq tmux wget git which nmap packer terraform
     vagrant tree s3cmd wireguard stow unzip virtmanager
-    neofetch kubernetes pinentry
+    neofetch kubernetes pinentry lm_sensors minikube
 
     # Media
-    scrot zathura mpv feh owncloud-client beets
+    scrot zathura mpv feh sxiv owncloud-client beets
     mutt ncmpcpp libreoffice
 
     # Programming
@@ -82,13 +85,12 @@
 
   ];
 
-  fonts = {
-    fonts = with pkgs; [
-      source-code-pro
-      font-awesome-ttf
-      powerline-fonts
-    ];
-  };
+  fonts.fonts = with pkgs; [
+    corefonts
+    source-code-pro
+    font-awesome-ttf
+    powerline-fonts
+  ];
 
   services = {
     mpd = {
@@ -97,12 +99,12 @@
       group = "users";
       dataDir = "/home/jesse/.mpd";
       musicDirectory = "/mnt/music";
-      extraConfig = ''
-        audio_output {
-          type "pulse"
-          name "pulse audio"
-        }
-      '';
+#      extraConfig = ''
+#        audio_output {
+#          type "pulse"
+#          name "pulse audio"
+#        }
+#      '';
     };
     
     xserver = {
