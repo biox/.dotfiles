@@ -3,8 +3,18 @@
 {
 
   system.stateVersion = "17.09";
+
   # Ugh
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+
+    packageOverrides = super: let self = super.pkgs; in {
+      polybar = super.polybar.override {
+        i3Support = true;
+        mpdSupport = true;
+      };
+    };
+  };
 
   imports =
     [
@@ -55,8 +65,7 @@
   environment.systemPackages = with pkgs; [
 
     # WM Essentials
-    i3-gaps i3lock polybar
-    rofi rofi-pass
+    i3 i3lock polybar rofi rofi-pass
 
     # Rofi-pass deps
     xdotool

@@ -26,18 +26,14 @@
   bindsym $mod+Return exec alacritty
   bindsym $mod+shift+q kill
   bindsym $mod+p exec rofi-pass --root "$HOME/ownCloud/pass"
-  bindsym $mod+equal exec cmus-remote --volume +5%
-  bindsym $mod+minus exec cmus-remote --volume -5%
   bindsym $mod+d exec rofi -show run
-#  bindsym $mod+q exec firefox
   bindsym $mod+f fullscreen toggle
-#  bindsym $mod+e exec code
   bindsym $mod+Shift+space floating toggle
   bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
   bindsym $mod+Shift+r restart
   bindsym $mod+shift+x exec i3lock
   bindsym $mod+Shift+c reload
-  bindsym Print exec scrot -e 'mv $f /tmp/'
+  bindsym Print exec scrot -e 'mv $f /tmp/';exec twmnc -c 'screenshawt'
 
 # move focused window
   bindsym $mod+h focus left
