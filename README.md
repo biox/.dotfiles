@@ -29,14 +29,14 @@
 
 ## GPG Project
 
-- [ ] buy a yubikey
-- [ ] generate GPG master keypair + 3 subkeys
-- [ ] Store master on paper + usb drive
-- [ ] Store subkey secrets on yubikey
-- [ ] SSH auth via GPG
+- [x] buy a ~~yubikey~~ OpenPGP smartcard
+- [x] generate GPG master keypair + 3 subkeys
+- [x] Store master on paper + usb drive
+- [x] Store subkey secrets on ~~yubikey~~ OpenPGP smartcard
+- [x] SSH auth via GPG
 - [ ] sup + msmtp + offlineimap via GPG
-- [ ] pass via GPG
-- [ ] git via GPG
+- [x] pass via GPG
+- [x] git via GPG
 - [ ] figure out email encryption via GPG
 
 ## WireGuard Project
