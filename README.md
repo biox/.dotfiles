@@ -20,6 +20,8 @@
 - `gpg --card-edit`
 - `fetch`
 - `quit`
+- `gpg --edit-key key_id`
+- "I trust ultimately"
 
 _enter passwords as required_
 
