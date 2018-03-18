@@ -1,6 +1,6 @@
 [user]
-	email = jesse@arkham.city
-	name = Jesse Olson
+        email = jesse@arkham.city
+        name = Jesse Olson
 [core]
         editor = vim
 [web]
