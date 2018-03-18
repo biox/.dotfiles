@@ -14,6 +14,15 @@
 - `stow vim/reshift/zsh/etc/whatever`
 - DONE
 
+## GPG setup
+
+- Attach smartcard
+- `gpg --card-edit`
+- `fetch`
+- `quit`
+
+_enter passwords as required_
+
 # TODO
 
 - [x] replace topbar with fontawesome icons
