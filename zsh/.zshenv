@@ -9,26 +9,22 @@ export PAGER=less
 export PATH="$HOME/code/go/bin:$PATH"
 export VISUAL="vim"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 if [[ `uname` == 'Linux' ]] ;then
-	export PATH="$HOME/.rbenv/bin:$PATH"
+  export PATH="$HOME/.rbenv/bin:$PATH"
 else
-	export PATH="$HOME/.rbenv/bin:$PATH"
-	export RBENV_ROOT=/usr/local/var/rbenv
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  export RBENV_ROOT=/usr/local/var/rbenv
 fi
 
-# Setup GPG sockets properly
-GPG_AGENT_SOCKET="${HOME}/.gnupg/S.gpg-agent.ssh"
-if [ ! -S $GPG_AGENT_SOCKET ]; then
-  gpg-agent --daemon >/dev/null 2>&1
-  export GPG_TTY=$(tty)
+# Start the daemon here since macbooks don't have i3
+gpg-agent --daemon >/dev/null 2>&1
+
+unset SSH_AGENT_PID
+export GPG_TTY=$(tty)
+
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
 
-# Set SSH to use gpg-agent if it is configured to do so
-GNUPGCONFIG=${GNUPGHOME:-"$HOME/.gnupg/gpg-agent.conf"}
-if grep -q enable-ssh-support "$GNUPGCONFIG"; then
-  unset SSH_AGENT_PID
-  export SSH_AUTH_SOCK=$GPG_AGENT_SOCKET
-fi
-
-# Point pass to ownCloud database
 export PASSWORD_STORE_DIR="$HOME/ownCloud/pass"
