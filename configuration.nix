@@ -75,7 +75,7 @@
 
     # Media
     scrot zathura mpv feh sxiv owncloud-client beets
-    mutt ncmpcpp libreoffice
+    mutt ncmpcpp libreoffice mpc_cli
 
     # Programming
     man ack ruby python27Full python3 go
@@ -86,7 +86,6 @@
   ];
 
   fonts.fonts = with pkgs; [
-    corefonts
     source-code-pro
     font-awesome-ttf
     powerline-fonts
