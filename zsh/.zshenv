@@ -29,3 +29,6 @@ if grep -q enable-ssh-support "$GNUPGCONFIG"; then
   unset SSH_AGENT_PID
   export SSH_AUTH_SOCK=$GPG_AGENT_SOCKET
 fi
+
+# Point pass to ownCloud database
+export PASSWORD_STORE_DIR="$HOME/ownCloud/pass"
