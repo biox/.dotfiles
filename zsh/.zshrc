@@ -34,9 +34,12 @@ setopt auto_cd
 cdpath=($HOME/code)
 
 # Aliases
-# Utilities
 alias vi='vim'
-alias ls='ls --color'
+if [[ `uname` == 'Linux' ]] ;then
+  alias ls='ls --color'
+else
+  alias ls='ls -p'
+fi
 
 # Git
 alias ga='git add --all'
