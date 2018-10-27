@@ -15,6 +15,7 @@
 - DONE
 
 ## Install via curl
+
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/biox/.dotfiles/master/distribute.sh)"
 ```
